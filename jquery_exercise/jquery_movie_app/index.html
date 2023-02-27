@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies App</title>
+  <body>
+  
+    <section>
+      <aside>
+        <h1>Title and Rating</h1>
+        <form id="movieinfo">
+          <label for="movietitle">Movie Title</label>
+          <input type="text" id="mtitle" autofocus />
+         
+          <label class="rating-label">Movie Rating</label>
+            <input class="rating" 
+            max="5" 
+            oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+                step="0.5"
+              style="--value:2.5"
+              type="range"
+              value="2.5">
+          
+  
+          <button id="submit-btn" type="submit">submit</button>
+        
+        </form>
+<link rel="stylesheet" href="styles.css">
+<!-- <link rel="stylesheet" -->
+        <!-- href="https://unpkg.com/bootstrap/dist/css/bootstrap.css"> -->
+        <section>
+
+            <h4>Movies</h4>
+            <ul id="movies"></ul>
+
+          </section>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="app.js"></script>      
+</body>
+</html>
