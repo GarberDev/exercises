@@ -34,8 +34,9 @@ const API_ENDPOINT = "http://jservice.io/api/categories?count=100";
 async function getCategoryIds() {
   try {
     const response = await axios.get(API_ENDPOINT);
+    // const categories = response.data;
     const categoryIds = response.data.map((cat) => cat.id);
-    const categories = response.data;
+
     const randomCategoryIds = [];
     //pick random num_categories from random category ids
     while (randomCategoryIds.length < NUM_CATEGORIES) {
@@ -115,8 +116,15 @@ async function fillTable() {
 
   //ad click listener to each cell
   $(".clue").on("click", handleClick);
+  // $(".clue").textContent.on("click", handleClick);
 
+  // $(".clue").attr().on("click", handleClick);
+  // $(".question-mark").on("click", handleClick);
   //get data for each category and fill in clues
+
+  // consoleLogevt(evt) {
+  //   console.log(evt);
+  // }
 
   for (let category of categories) {
     const categoryId = category.id;
@@ -129,9 +137,9 @@ async function fillTable() {
         $(`#jeopardy tbody tr:nth-child(${i + 1}) td`)[category.index]
       );
       //replace question mark with question
-      $cell.attr("data-question", clue.data - question);
+      $cell.attr("data-question", clue.data);
       $cell.attr("data-answer", clue.answer);
-      $cell.find(".question-mark").text(clue.data - question);
+      $cell.find(".question-mark").text(clue.data);
       clue.showing = "question";
     }
   }
@@ -146,14 +154,20 @@ async function fillTable() {
 
 function handleClick(evt) {
   const cell = evt.target;
+
+  // console.log(cell);
   const $cell = $(cell);
   const showing = $cell.data("showing");
 
-  console.log($cell.data("question"));
+  const $span = $("span.question-mark");
+
+  console.log($cell.data("showing"));
 
   if (showing === undefined) {
     $cell.data("showing", "question");
     $cell.find(".question-mark").text($cell.data("question"));
+    $span.data("showing", "question");
+    $span.find(".question-mark").text($span.data("question"));
   } else if (showing === "question") {
     $cell.data("showing", "answer");
     $cell.find(".question-mark").text($cell.data("answer"));
@@ -219,3 +233,9 @@ $(document).ready(function () {
 // /** On page load, add event handler for clicking clues */
 // $("#jeopardy").on("click", "td", handleClick);
 // // TODO
+// function handleClick(evt) {
+
+//   // Log click location
+//   console.log(evt.target);
+
+// }
