@@ -31,6 +31,11 @@ function generateStoryMarkup(story) {
       ${showStar ? getStarHTML(story, currentUser) : ""}
       <div>
  
+
+
+
+
+
     
         <a href="${story.url}" target="a_blank" class="story-link">
           ${story.title}
@@ -52,12 +57,6 @@ function getStarHTML(story, user) {
     </span>`;
 }
 
-function getDeleteBtnHTML() {
-  return `
-      <span class="trash-can">
-        <i class="fas fa-trash-alt"></i>
-      </span>`;
-}
 /** Gets list of stories from server, generates their HTML, and puts on page. */
 
 function putStoriesOnPage() {
@@ -137,15 +136,15 @@ $storiesLists.on("click", ".star", toggleStoryFavorite);
 //add stories to story page
 
 function addToMyStories() {
-  $ownStories.empty();
+  $myStories.empty();
 
   if (currentUser.ownStories.length === 0) {
-    $ownStories.append("<h5>None</h5>");
+    $myStories.append("<h5>None</h5>");
   } else {
     for (let story of currentUser.ownStories) {
       let $story = generateStoryMarkup(story);
-      $ownStories.append($story);
+      $myStories.append($story);
     }
-    $ownStories.show();
+    $myStories.show();
   }
 }
