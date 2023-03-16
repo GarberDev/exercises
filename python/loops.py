@@ -6,7 +6,7 @@
 
 # print("all done")
 
-target = 37
+# target = 37
 
 guess =  None
 
