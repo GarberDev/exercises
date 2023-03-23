@@ -29,7 +29,7 @@ def convert_temp(unit_in, unit_out, temp):
       return (temp * 1.8) + 32
 
     if unit_in == "f" and unit_out =="c":
-      return (temp * 32) + 0.5556
+      return (temp - 32) * 0.5556
 
     if unit_in == unit_out:
       return temp
