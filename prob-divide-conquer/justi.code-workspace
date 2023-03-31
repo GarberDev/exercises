@@ -1,0 +1,246 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "ms-vscode.js-debug-companion",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/ms-vscode.js-debug-companion"
+		},
+		{
+			"name": "configuration-editing",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/configuration-editing"
+		},
+		{
+			"name": "git-base",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/git-base"
+		},
+		{
+			"name": "typescript-language-features",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/typescript-language-features"
+		},
+		{
+			"name": "microsoft-authentication",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/microsoft-authentication"
+		},
+		{
+			"name": "gulp",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/gulp"
+		},
+		{
+			"name": "php-language-features",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/php-language-features"
+		},
+		{
+			"name": "html-language-features",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/html-language-features"
+		},
+		{
+			"name": "jake",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/jake"
+		},
+		{
+			"name": "server",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/html-language-features/server"
+		},
+		{
+			"name": "emmet",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/emmet"
+		},
+		{
+			"name": "debug-server-ready",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/debug-server-ready"
+		},
+		{
+			"name": "markdown-math",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/markdown-math"
+		},
+		{
+			"name": "extension-editing",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/extension-editing"
+		},
+		{
+			"name": "search-result",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/search-result"
+		},
+		{
+			"name": "ms-vscode.js-debug",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/ms-vscode.js-debug"
+		},
+		{
+			"name": "github-authentication",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/github-authentication"
+		},
+		{
+			"name": "ms-vscode.vscode-js-profile-table",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/ms-vscode.vscode-js-profile-table"
+		},
+		{
+			"name": "server",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/json-language-features/server"
+		},
+		{
+			"name": "json-language-features",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/json-language-features"
+		},
+		{
+			"name": "npm",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/npm"
+		},
+		{
+			"name": "references-view",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/references-view"
+		},
+		{
+			"name": "simple-browser",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/simple-browser"
+		},
+		{
+			"name": "grunt",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/grunt"
+		},
+		{
+			"name": "markdown-language-features",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/markdown-language-features"
+		},
+		{
+			"name": "server",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/markdown-language-features/server"
+		},
+		{
+			"name": "merge-conflict",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/merge-conflict"
+		},
+		{
+			"name": "debug-auto-launch",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/debug-auto-launch"
+		},
+		{
+			"name": "css-language-features",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/css-language-features"
+		},
+		{
+			"name": "git",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/git"
+		},
+		{
+			"name": "server",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/css-language-features/server"
+		},
+		{
+			"name": "github",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/github"
+		},
+		{
+			"name": "media-preview",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/media-preview"
+		},
+		{
+			"name": "ee2b180d582a7f601fa6ecfdad8d9fd269ab1884",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884"
+		},
+		{
+			"name": "ipynb",
+			"path": "../../.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/extensions/ipynb"
+		},
+		{
+			"name": "yzhang.dictionary-completion-1.2.2",
+			"path": "../../.vscode-server/extensions/yzhang.dictionary-completion-1.2.2"
+		},
+		{
+			"name": "github.copilot-1.78.9758",
+			"path": "../../.vscode-server/extensions/github.copilot-1.78.9758"
+		},
+		{
+			"name": "pflannery.vscode-versionlens-1.5.0",
+			"path": "../../.vscode-server/extensions/pflannery.vscode-versionlens-1.5.0"
+		},
+		{
+			"name": "esbenp.prettier-vscode-9.10.4",
+			"path": "../../.vscode-server/extensions/esbenp.prettier-vscode-9.10.4"
+		},
+		{
+			"name": "ms-vscode.live-server-0.4.7",
+			"path": "../../.vscode-server/extensions/ms-vscode.live-server-0.4.7"
+		},
+		{
+			"name": "orta.vscode-jest-5.2.3",
+			"path": "../../.vscode-server/extensions/orta.vscode-jest-5.2.3"
+		},
+		{
+			"name": "yzhang.markdown-all-in-one-3.5.1",
+			"path": "../../.vscode-server/extensions/yzhang.markdown-all-in-one-3.5.1"
+		},
+		{
+			"name": "ms-vscode.wordcount-0.1.0",
+			"path": "../../.vscode-server/extensions/ms-vscode.wordcount-0.1.0"
+		},
+		{
+			"name": "web_backend",
+			"path": "../python/pythonv/venv/lib64/python3.10/site-packages/matplotlib/backends/web_backend"
+		},
+		{
+			"name": "web_backend",
+			"path": "../python/pythonv/venv/lib/python3.10/site-packages/matplotlib/backends/web_backend"
+		},
+		{
+			"name": "prob-divide-conquer",
+			"path": "."
+		},
+		{
+			"name": "4.9",
+			"path": "../../.cache/typescript/4.9"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"justi",
+			"ms-vscode.js-debug-companion",
+			"configuration-editing",
+			"git-base",
+			"typescript-language-features",
+			"microsoft-authentication",
+			"gulp",
+			"php-language-features",
+			"html-language-features",
+			"jake",
+			"server",
+			"emmet",
+			"debug-server-ready",
+			"markdown-math",
+			"extension-editing",
+			"search-result",
+			"ms-vscode.js-debug",
+			"github-authentication",
+			"ms-vscode.vscode-js-profile-table",
+			"server",
+			"json-language-features",
+			"npm",
+			"references-view",
+			"simple-browser",
+			"grunt",
+			"markdown-language-features",
+			"server",
+			"merge-conflict",
+			"debug-auto-launch",
+			"css-language-features",
+			"git",
+			"server",
+			"github",
+			"media-preview",
+			"ee2b180d582a7f601fa6ecfdad8d9fd269ab1884",
+			"ipynb",
+			"yzhang.dictionary-completion-1.2.2",
+			"github.copilot-1.78.9758",
+			"pflannery.vscode-versionlens-1.5.0",
+			"esbenp.prettier-vscode-9.10.4",
+			"ms-vscode.live-server-0.4.7",
+			"orta.vscode-jest-5.2.3",
+			"yzhang.markdown-all-in-one-3.5.1",
+			"ms-vscode.wordcount-0.1.0",
+			"web_backend",
+			"web_backend",
+			"4.9"
+		]
+	}
+}
