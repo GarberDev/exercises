@@ -213,19 +213,16 @@
 			"ms-vscode.js-debug",
 			"github-authentication",
 			"ms-vscode.vscode-js-profile-table",
-			"server",
 			"json-language-features",
 			"npm",
 			"references-view",
 			"simple-browser",
 			"grunt",
 			"markdown-language-features",
-			"server",
 			"merge-conflict",
 			"debug-auto-launch",
 			"css-language-features",
 			"git",
-			"server",
 			"github",
 			"media-preview",
 			"ee2b180d582a7f601fa6ecfdad8d9fd269ab1884",
@@ -239,8 +236,8 @@
 			"yzhang.markdown-all-in-one-3.5.1",
 			"ms-vscode.wordcount-0.1.0",
 			"web_backend",
-			"web_backend",
-			"4.9"
+			"4.9",
+			"prob-divide-conquer"
 		]
 	}
 }
