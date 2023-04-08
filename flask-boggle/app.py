@@ -1,11 +1,25 @@
-from flask import Flask, request, render_template, redirect, session, jsonify
+from flask import Flask, request, render_template, redirect, session, jsonify, url_for
 from boggle import Boggle
+from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, session, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
+from flask_debugtoolbar import DebugToolbarExtension
+from models import User, init_app, db
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///boggle'
 app.config['SECRET_KEY'] = 'secretkey'
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
+
+init_app(app)
+
+
+# db = SQLAlchemy()
+
+
 boggle_game = Boggle()
+
 
 @app.route('/')
 def home():
@@ -16,7 +30,8 @@ def home():
     totalplays = session.get('totalplays', 0)
     return render_template('index.html', board=board, highscore=highscore, totalplays=totalplays)
 
-@app.route('/check-word', methods = ['GET'])
+
+@app.route('/check-word', methods=['GET'])
 def check_word():
     """Check if a given word is valid in the current game board."""
     word = request.args.get('word')
@@ -24,6 +39,62 @@ def check_word():
     result = boggle_game.check_valid_word(board, word)
     return jsonify({'result': result})
 
+
+@app.route('/users/new', methods=['GET'])
+def new_user():
+    return render_template('new_user.html')
+
+
+@app.route('/users', methods=['GET'])
+def user_listing():
+    users = User.query.all()
+    return render_template('user_listing.html', users=users)
+
+
+@app.route('/users/<int:user_id>', methods=['GET'])
+def user_detail(user_id):
+    user = User.query.get_or_404(user_id)
+    return render_template('user_detail.html', user=user)
+
+
+@app.route('/users/<int:user_id>/edit', methods=['GET'])
+def edit_user(user_id):
+    user = User.query.get_or_404(user_id)
+    return render_template('user_edit.html', user=user)
+
+
+@app.route('/users/<int:user_id>/edit', methods=['POST'])
+def update_user(user_id):
+    user = User.query.get_or_404(user_id)
+    user.first_name = request.form['first_name']
+    user.last_name = request.form['last_name']
+    user.image_url = request.form['image_url'] if request.form['image_url'] else None
+    db.session.commit()
+    return redirect(url_for('user_listing'))
+
+
+@app.route('/users/<int:user_id>/delete', methods=['POST'])
+def delete_user(user_id):
+    user = User.query.get_or_404(user_id)
+    db.session.expunge(user)
+    db.session.delete(user)
+    db.session.commit()
+    return redirect(url_for('user_listing'))
+
+
+@app.route('/users', methods=['POST'])
+def create_user():
+    first_name = request.form['first_name']
+    last_name = request.form['last_name']
+    image_url = request.form['image_url'] if request.form['image_url'] else None
+
+    user = User(first_name=first_name,
+                last_name=last_name, image_url=image_url)
+    db.session.add(user)
+    db.session.commit()
+
+    users = User.query.all()
+    return render_template('user_listing.html', users=users)
 
 
 @app.route("/post-score", methods=['POST'])

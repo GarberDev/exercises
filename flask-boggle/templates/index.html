@@ -38,6 +38,8 @@
             <form method="POST" id="guess-form">
                 <input type="text" name="word" id="word" placeholder="Enter your guess">
                 <button type="submit">Submit</button>
+                <a id="users" href="{{ url_for('user_listing') }}">Users</a>
+                <a id="users" href="{{ url_for('new_user') }}">New User</a>
             </form>
             <div id="play-again-container">
               <button id="play-again">Play Again</button>

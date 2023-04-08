@@ -85,3 +85,27 @@ form {
   width: 80%;
   text-align: center;
 }
+
+#users {  
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #C35D9E; /* Cute pinkish button color */
+  color: white; /* White text on button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none;
+}
+
+
+
+#ev {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #C35D9E; /* Cute pinkish button color */
+  color: white; /* White text on button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none;
+}
