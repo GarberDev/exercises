@@ -7,11 +7,12 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-   
+   <container>
     <div id="content">
         {% block content %}
         <!-- This is where the content from other templates will be injected -->
         {% endblock %}
     </div>
+    </container>
 </body>
 </html>

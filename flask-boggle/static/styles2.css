@@ -36,19 +36,19 @@ form {
     background-color: #1e528e;
   }
   
-
-  /* For both templates */
 body {
+    background-color: #f1defd;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
-  
-  /* For base.html */
+
   .container {
     max-width: 800px;
-    margin: auto;
-    padding: 20px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: #C35D9E; /* Cute pinkish color for the result text */
   }
   
   a {
@@ -60,9 +60,16 @@ body {
     text-decoration: underline;
   }
   
-  /* For new_user.html and user_listing.html */
-  h1 {
-    margin-bottom: 20px;
+
+  h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ff69b4;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px #ccc;
   }
   
   form {
@@ -147,4 +154,36 @@ a.view {
     border-radius: 5px;
     border: none;
   }
+  ul {
+    list-style: none;
+  }
+
+p,a {
+  padding: 20px;
+}
+
+h3 {
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #ff69b4;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #ccc;
   
+
+}
+li{
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+text-decoration: none;
+color: #ff69b4;
+font-size: 1.5rem;
+margin-bottom: 2rem;
+letter-spacing: 1px;
+text-shadow: 1px 1px 1px #ccc;
+
+}

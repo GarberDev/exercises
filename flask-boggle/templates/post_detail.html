@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>{{ post.title }}</h2>
+  <p><i>Posted by {{ post.user.first_name }} {{ post.user.last_name }} on {{ post.created_at.strftime("%B %d, %Y") }}</i></p>
+  <p>{{ post.content }}</p>
+  <a href="{{ url_for('edit_post', post_id=post.id) }}" class="edit">Edit</a> <a class="view"  href="{{ url_for('user_listing') }}">Users List</a>
+  <form method="POST" action="{{ url_for('delete_post', post_id=post.id) }}" class="d-inline">
+    <button type="submit" class="delete">Delete</button>
+  </form>
+{% endblock %}
