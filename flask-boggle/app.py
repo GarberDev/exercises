@@ -116,7 +116,9 @@ def post_score():
 @app.route('/users/<int:user_id>/posts/new', methods=['GET'])
 def new_post(user_id):
     user = User.query.get_or_404(user_id)
-    return render_template('new_post.html', user=user)
+    all_tags = Tag.query.all()  # Fetch all tags
+    # Pass all_tags to the template
+    return render_template('new_post.html', user=user, all_tags=all_tags)
 
 
 @app.route('/posts/<int:post_id>', methods=['GET'])
