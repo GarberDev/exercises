@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from sqlalchemy import UniqueConstraint
 
 db = SQLAlchemy()
 
@@ -34,3 +35,33 @@ class Post(db.Model):
 
     def __repr__(self):
         return f'<Post {self.title} by User {self.user_id}>'
+
+
+class Tag(db.Model):
+    __tablename__ = 'tags'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String, nullable=False, unique=True)
+
+    posts = db.relationship('Post', secondary='post_tags', backref='tags')
+
+    def __repr__(self):
+        return f'<Tag {self.name}>'
+
+
+class PostTag(db.Model):
+    __tablename__ = 'post_tags'
+    __table_args__ = (UniqueConstraint(
+        'post_id', 'tag_id', name='unique_post_tag'),)
+
+    post_id = db.Column(db.Integer, db.ForeignKey(
+        'posts.id'), primary_key=True)
+    tag_id = db.Column(db.Integer, db.ForeignKey('tags.id'), primary_key=True)
+
+    post = db.relationship('Post', backref=db.backref(
+        'post_tags', cascade='all, delete-orphan'))
+    tag = db.relationship('Tag', backref=db.backref(
+        'post_tags', cascade='all, delete-orphan'))
+
+    def __repr__(self):
+        return f'<PostTag post_id={self.post_id}, tag_id={self.tag_id}>'
