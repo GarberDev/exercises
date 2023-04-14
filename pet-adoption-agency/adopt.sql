@@ -4,7 +4,7 @@ CREATE DATABASE adopt_db;
 
 \c adopt_db
 
-CREATE TABLE IF NOT EXISTS pets (
+CREATE TABLE IF NOT EXISTS Pet (
     id SERIAL PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
     species VARCHAR(30) NOT NULL,
