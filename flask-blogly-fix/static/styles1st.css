@@ -1,0 +1,111 @@
+body {
+  font-family: sans-serif;
+  background-color: #f1defd; /* Light pastel purple background */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: #C35D9E; /* Cute pinkish color for the result text */
+}
+
+h1 {
+  text-align: center;
+  color: #C35D9E; /* Cute pinkish color for the heading */
+}
+
+.board {
+  margin: 0 auto;
+  border-collapse: separate; /* Allows for rounded corners in table cells */
+  border-spacing: 10px; /* Space between table cells */
+  margin-bottom: 20px;
+
+}
+
+.board td {
+  border: 1px solid #C35D9E; /* Cute pinkish border color */
+  border-radius: 10px; /* Rounded corners for table cells */
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #FFF6F8; /* Light pastel pink background for table cells */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.board td:hover {
+  background-color: #FFEEF0; /* Light pastel pink hover color */
+}
+
+#guess {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px; /* Rounded corners for the input */
+  border: 1px solid #C35D9E; /* Cute pinkish border color */
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #C35D9E; /* Cute pinkish button color */
+  color: white; /* White text on button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+}
+
+button:hover {
+  background-color: #E686B3; /* Lighter pinkish hover color for the button */
+}
+
+form {
+  display: center;
+  margin-top: 1rem;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+
+/* Add this to your existing CSS */
+
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #C35D9E; /* Cute pinkish color for the result text */
+  padding: 5px;
+  border: 2px dashed #C35D9E; /* Cute pinkish dashed border */
+  border-radius: 10px; /* Rounded corners for the result div */
+  width: 80%;
+  text-align: center;
+}
+
+#users {  
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #C35D9E; /* Cute pinkish button color */
+  color: white; /* White text on button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none;
+}
+
+
+
+#ev {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #C35D9E; /* Cute pinkish button color */
+  color: white; /* White text on button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none;
+}
