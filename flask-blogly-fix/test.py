@@ -1,5 +1,4 @@
 from flask import session
-from boggle import Boggle
 from unittest import TestCase
 from app import app
 from models import db, User
@@ -27,16 +26,6 @@ class FlaskTests(TestCase):
         """Clean up any fouled transaction."""
 
         db.session.rollback()
-
-    def test_home(self):
-        """Test the home page."""
-
-        with app.test_client() as client:
-            resp = client.get('/')
-            html = resp.get_data(as_text=True)
-
-            self.assertEqual(resp.status_code, 200)
-            self.assertIn('<div id="board">', html)
 
     def test_check_word(self):
         """Test the check_word view."""

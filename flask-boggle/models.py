@@ -47,7 +47,7 @@ class Tag(db.Model):
 
     def __repr__(self):
         return f'<Tag {self.name}>'
-
+# 
 
 class PostTag(db.Model):
     __tablename__ = 'post_tags'
