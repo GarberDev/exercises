@@ -15,7 +15,15 @@ connect_db(app)
 
 @app.route('/')
 def index():
-    return redirect('/register')
+    feedbacks = Feedback.query.all()
+    register_url = url_for('register')
+    login_url = url_for('login')
+    if 'username' in session:
+        user = User.query.get(session['username'])
+        username = user.username
+    else:
+        username = None
+    return render_template('index.html', feedbacks=feedbacks, register_url=register_url, login_url=login_url, username=username)
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -50,14 +58,14 @@ def login():
     return render_template('login.html', form=form)
 
 
-@app.route('/users/<username>')
-def user_detail(username):
-    if "username" not in session or session["username"] != username:
-        flash("You must be logged in to view this page.", "danger")
-        return redirect(url_for("login"))
+# @app.route('/users/<username>')
+# def user_detail(username):
+#     if "username" not in session or session["username"] != username:
+#         flash("You must be logged in to view this page.", "danger")
+#         return redirect(url_for("login"))
 
-    user = User.query.get_or_404(username)
-    return render_template("user_detail.html", user=user)
+#     user = User.query.get_or_404(username)
+#     return render_template("user_detail.html", feedbacks=Feedback)
 
 
 @app.route('/secret')
@@ -76,13 +84,13 @@ def logout():
 
 
 @app.route('/users/<username>')
-def user_profile(username):
+def user_detail(username):
     if 'username' not in session or session['username'] != username:
         flash('You must be logged in to view this page.', 'danger')
         return redirect(url_for('login'))
     user = User.query.get_or_404(username)
     feedbacks = Feedback.query.filter_by(username=username).all()
-    return render_template('user_profile.html', user=user, feedbacks=feedbacks)
+    return render_template('user_detail.html', user=user, feedbacks=feedbacks)
 
 
 @app.route('/users/<username>/delete', methods=['POST'])
@@ -102,6 +110,7 @@ def add_feedback(username):
     if 'username' not in session or session['username'] != username:
         flash('You must be logged in to view this page.', 'danger')
         return redirect(url_for('login'))
+    user = User.query.get_or_404(username)
     form = FeedbackForm()
     if form.validate_on_submit():
         feedback = Feedback(title=form.title.data,
@@ -109,7 +118,7 @@ def add_feedback(username):
         db.session.add(feedback)
         db.session.commit()
         return redirect(f'/users/{username}')
-    return render_template('feedback_add.html', form=form)
+    return render_template('feedback_add.html', form=form, user=user)
 
 
 @app.route('/feedback/<int:feedback_id>/update', methods=['GET', 'POST'])
