@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-md-center">
+  <div class="col-md-4">
+    <h2 class="join-message">Edit Your Profile.</h2>
+    <form method="POST" id="user_form">
+      {{ form.hidden_tag() }}
+
+      {% for field in form if field.widget.input_type != 'hidden' and field.name != 'password' %}
+      {% for error in field.errors %}
+      <span class="text-danger">{{ error }}</span>
+      {% endfor %}
+      {{ field(placeholder=field.label.text, class="form-control") }}
+      {% endfor %}
+      {% if form.password.errors %}
+      {% for error in form.password.errors %}
+      <span class="text-danger">
+        {{ error }}
+      </span>
+      {% endfor %}
+      {% endif %}
+
+      <div class="form-group">
+        <label for="header_image_url">Header Image URL</label>
+        <input type="text" name="header_image_url" id="header_image_url" class="form-control"
+          value="{{ form.header_image_url.data or user.header_image_url }}">
+      </div>
+
+      <p>To confirm changes, enter your password:</p>
+      {{ form.password(placeholder="Enter your password to confirm", class="form-control") }}
+
+      <div class="edit-btn-area">
+        <button class="btn btn-success">Edit this user!</button>
+        <a href="/" class="btn btn-outline-secondary">Cancel</a>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="bio">Bio</label>
+        <textarea name="bio" id="bio" class="form-control">{{ form.bio.data or user.bio }}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location" class="form-control"
+          value="{{ form.location.data or user.location }}">
+      </div> -->
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

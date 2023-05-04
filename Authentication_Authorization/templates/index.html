@@ -10,40 +10,43 @@ Logged in as {{ username }} | <a href="{{ url_for('logout') }}">Log Out</a>
     href="{{ url_for('login') }}">Log In</a>
 {% endif %}
 <h1>All Feedback</h1>
-<ul>
-    {% for feedback in feedbacks %}
-    <!-- <li>{{ feedback.title }} - {{ feedback.user.username }}</li> -->
 
 
-
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Username</th>
-                <th>Feedback</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ feedback.user.username }}</td>
-                <td>{{ feedback.title }}</td>
-
-            </tr>
-        </tbody>
-    </table>
+{% for feedback in feedbacks %}
+<!-- <li>{{ feedback.title }} - {{ feedback.user.username }}</li> -->
 
 
 
 
 
+<table class="table table-striped">
+    <thead>
+
+        <tr>
+            <th>Username</th>
+            <th>Feedback</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ feedback.user.username }}</td>
+            <td>{{ feedback.title }}</td>
+
+        </tr>
+    </tbody>
+</table>
 
 
 
 
-    {% endfor %}
-</ul>
+
+
+
+
+
+{% endfor %}
+
 
 
 
