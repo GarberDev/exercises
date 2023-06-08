@@ -7,7 +7,7 @@ function drawCard() {
     .then((response) => {
       const card = response.data.cards[0];
 
-      // Display the card image with a rotation
+      // display the card image with a rotation
       const img = document.createElement("img");
       img.classList.add("card-img");
       img.style.transform = `rotate(${rotation}deg)`;
@@ -15,7 +15,7 @@ function drawCard() {
 
       document.getElementById("card").appendChild(img);
 
-      // Adjust rotation for next card
+      // adjust rotation for next card
       rotation += 15;
     })
     .catch((error) => {
