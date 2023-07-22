@@ -1,0 +1,19 @@
+
+.person {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #15202B;  
+    color: #FFFFFF; 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.person ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.person h3 {
+    color: #1DA1F2; 
+}
